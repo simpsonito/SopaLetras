@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unidad 3 :: Autoevaluación 2</title>
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.sopaletras.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+	$(function(){
+	 var sopaoption = {
+                    vertical: 'S',
+                    onWin: "mostrarTodo"
+                };
+		$("#sopa").SopaLetras(sopaoption);
+		$("#sopa").SopaLetras("enabled");
+	});
+	
+	function retroalimentar(cadena){
+		document.getElementById("retroalimentacion").innerHTML = cadena;
+	}
+</script>
+<style type="text/css">
+body{
+	/*margin:1em;*/
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size:12px;	
+	line-height:1.4em;
+	color: #333;
+ 	margin: 0;
+	background:#FFF;
+	height:400px;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;	
+	
+}
+#main
+{
+/*	max-width: 960px;*/
+	margin: 30px auto 0 auto;
+	background: white;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 30px;
+	border: 1px solid #adaa9f;
+	-moz-box-shadow: 0 2px 2px #9c9c9c;
+	-webkit-box-shadow: 0 2px 2px #9c9c9c;
+}
+div{
+	margin:3px;
+}
+
+div#setPregunta{
+	/*border: 1px solid #F00;*/
+	background-color:#fafafa;
+	padding:1em;
+	text-align: center;	
+}
+div.preguntaTexto{
+	/*border: 1px solid #00F;*/
+	margin:10px;
+	/*font-size:1.2em;*/
+}
+div.opciones{
+	/*border: 1px solid #333;*/
+	margin:2px;
+}
+div.opciones a.opcion{
+	/*border: 1px solid #369;*/
+	margin:2px;
+	white-space:inherit;
+}
+div#retroalimentacion{
+	background-color:#fff;
+	padding: 5px;
+	font-size: 12px;
+	text-align: center;
+	color: rgba(0, 0, 0, 1);
+	background-color: #fff;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+	border-color: #fff;
+	clear:both;
+	float:none;
+}
+.titulo_01{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #186cc4;
+}
+.subtitulo_01{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #999;
+}
+
+/*---- Sopa de letras ----*/
+    #sopa table
+    {
+        font-family:Helvetica, Geneva, sans-serif;
+		border: solid 1px #e8eef4;
+        border-collapse: collapse;
+		/*margin: 0 auto; //Para centrar*/
+    }
+    
+    #sopa table td
+    {
+        padding: 5px;
+        border: solid 1px #e8eef4;
+		text-align:center;
+    }
+    
+    #sopa table th
+    {
+        padding: 6px 5px;
+        text-align: left;
+        background-color: #e8eef4;
+        border: solid 1px #e8eef4;
+    }
+	td.noborrar{
+		color:#000 !important;
+		border: dotted 0px #FFF !important;
+		background-color: #99CCFF;
+	}
+	#sopa{
+		float:right;
+		display:inline-block;
+	}
+	#pistas{
+		text-align:left !important;
+		float:left;
+		display:inline-block;
+		width:30%;
+	}
+</style>
+</head>
+<body>
+
+<div id="main">
+    <p class="subtitulo_01">
+    	Unidad 3<br>
+    	<span class="titulo_01">Autoevaluación 2</span></p>
+    <p>
+    	Reconocer  las características principales de los distintos modelos y etapas  del desarrollo socio económico de nuestro país es relevante para la  práctica profesional. A partir de la información del tema “2. Los  modelos y las etapas de desarrollo” de los materiales de esta  unidad, lee las oraciones e identifica el elemento faltante.
+	</p>
+    <p>
+    Identifica la palabra que complementa correctamente cada oración y marca la primera letra y luego la última. Al finalizar el ejercicio podrás conocer tu desempeño.
+    </p>
+    <div id="setPregunta">
+    
+        <div id="pistas">
+            <p>1. El Método de las Necesidades Básicas Insatisfechas se originó en la etapa de <span id="resp0">_____________</span>.</p>
+            <p>2. El modelo posterior al ajuste exige un Estado austero que permita incrementar la competitividad de las <span id="resp1">_________</span>.</p>
+            <p>3. En el modelo de sustitución de importaciones el Estado asumió nuevos roles, entre ellos el de <span id="resp2">____________</span>.</p>
+            <p>4. La distribución del <span id="resp3">__________</span> fue el eje central en la etapa de desarrollo económico y social.</p>
+            <p>5. Durante el modelo de sustitución de importaciones, se protegió al trabajador asalariado en respuesta a las presiones de la organización <span id="resp4">__________</span>.</p>
+            <p>6. Durante la etapa de crecimiento económico el objetivo era elevar los niveles de <span id="resp5">_______________</span> para abastecer las necesidades de la población.</p>
+            <p>7. El mercado <span id="resp6">________________</span> fue el motor de crecimiento en el modelo posterior al ajuste.</p>
+            <p>8. Durante el modelo de crecimiento hacia afuera, el Estado era de corte liberal <span id="resp7">_________</span>.</p>
+        </div>
+        
+        <div id="sopa"></div>
+        
+        <div id="retroalimentacion"></div>
+    </div>
+    
+</div>
+
+</body>
+
+</html>
